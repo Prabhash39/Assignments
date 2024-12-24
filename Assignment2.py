@@ -175,3 +175,84 @@ print("The smallest number of desks needed:", total_desks)
 
 
 
+#Q.no16
+
+N = int(input("Enter the number of students (N): "))
+K = int(input("Enter the number of apples (K): "))
+apples_per_student = K // N 
+remaining_apples = K % N    
+
+print(f"Each student gets {apples_per_student} apples.")
+print(f"{remaining_apples} apples remain in the basket.")
+
+#Q.no17
+age = int(input("Enter your age: "))
+if age >= 18:
+    print("You are eligible to vote.")
+else:
+    print("You are not eligible to vote.")
+
+#Q.no18
+city = input("Enter the name of the city: ").strip()
+if city == "Delhi":
+    print("The monument of Delhi is Red Fort.")
+elif city == "Agra":
+    print("The monument of Agra is Taj Mahal.")
+elif city == "Jaipur":
+    print("The monument of Jaipur is Jal Mahal.")
+else:
+    print("Sorry, I don't have information about that city.")
+
+#Q.no19
+
+number = int(input("Enter a number: "))
+if number % 2 == 0 and number % 3 == 0:
+    print(f"{number} is divisible by both 2 and 3.")
+else:
+    print(f"{number} is not divisible by both 2 and 3.")
+
+#Q.no20
+
+num1 = float(input("Enter First Number: "))
+num2 = float(input("Enter Second Number: "))
+operator = input("Enter operator (+, -, *, /): ")
+if operator == "+":
+    result = num1 + num2
+elif operator == "-":
+    result = num1 - num2
+elif operator == "*":
+    result = num1 * num2
+elif operator == "/":
+    if num2 != 0: 
+        result = num1 / num2
+    else:
+        result = "undefined (division by zero is not allowed)"
+else:
+    result = "invalid operator"
+print(f"Your Answer is: {result}")
+
+ 
+#Q.no21
+total_days = int(input("Enter the total number of days: "))
+days_absent = int(input("Enter the total number of days absent: "))
+days_attended = total_days - days_absent
+percentage_attended = (days_attended / total_days) * 100
+print(f"Percentage of classes attended: {percentage_attended:.2f}%")
+if percentage_attended < 75:
+    print("You are not eligible to sit in the exam.")
+else:
+    print("You are eligible to sit in the exam.")
+
+#Q.no22
+percentage = float(input("Enter your percentage: "))
+if percentage < 40:
+    category = "Failed"
+elif 40 <= percentage < 55:
+    category = "Fair"
+elif 55 <= percentage < 65:
+    category = "Good"
+else:
+    category = "Excellent"
+print(f"Your category is: {category}")
+
+
