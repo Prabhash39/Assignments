@@ -255,4 +255,259 @@ else:
     category = "Excellent"
 print(f"Your category is: {category}")
 
+#Q.no23
+age = int(input("Enter age: "))
+gender = input("Enter gender (M/F): ").strip().upper()
+days = int(input("Enter number of working days: "))
+
+wage_per_day = 0
+if 18 <= age < 30:
+    if gender == 'M':
+        wage_per_day = 700
+    elif gender == 'F':
+        wage_per_day = 750
+elif 30 <= age <= 40:
+    if gender == 'M':
+        wage_per_day = 800
+    elif gender == 'F':
+        wage_per_day = 850
+else:
+    print("Age out of wage criteria.")
+if wage_per_day > 0:
+    total_wages = wage_per_day * days
+    print(f"The total wages are: {total_wages}")
+
+#Q.no24
+a = True
+b = True
+c = True
+d = True
+print(c)                          
+print(d)                          
+print(not a)                      
+print(not b)                      
+print(not c)                    
+print(not d)                    
+print(a and b)                 
+print(a or b)                     
+print(a and b or c)               
+print(not a or b or c)            
+print(not a or not b or not c)    
+print(not (not a or not b or not c))  
+
+#Q.no25
+number = int(input("Enter a number: "))
+if number % 3 == 0 and number % 5 == 0:
+    print("Fizz Buzz")
+elif number % 3 == 0:
+    print("Fizz")
+elif number % 5 == 0:
+    print("Buzz")
+else:
+    print(number)
+
+#Q.no26
+correct_username = "admin"
+correct_password = "password123"
+username = input("Enter your username: ")
+
+if username == correct_username:
+    password = input("Enter your password: ")
+    if password == correct_password:
+        print("Login successful! Welcome!")
+    else:
+        print("Incorrect password. Please try again.")
+else:
+    print("Username not found. Please check your username.")
+
+#Q.no27
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+if num1 > num2:
+    print(f"The greater number is: {num1}")
+elif num2 > num1:
+    print(f"The greater number is: {num2}")
+else:
+    print("Both numbers are equal.")
+    if num1 > 0:
+        print("The number is positive.")
+    elif num1 < 0:
+        print("The number is negative.")
+    else:
+        print("The number is zero.")
+    
+#Q.no28
+score = float(input("Enter your subject score: "))
+if score > 90:
+    print("Congratulations! You did an excellent job!")
+elif 50 <= score <= 90:
+    print("Good effort, but there's room for improvement. Keep working hard!")
+else:
+    print("Your score is below 50. It might be a good idea to retake the course and focus on mastering the subject.")
+
+#Q.no29
+age = int(input("Enter your age: "))
+
+if age >= 18:
+    degree = input("Do you have a degree? (yes/no): ").strip().lower()
+    if degree == "yes":
+        experience = float(input("Enter your years of work experience: "))
+        if experience > 3:
+            print("Highly Eligible.")
+        elif 1 <= experience <= 3:
+            print("Eligible.")
+        else:
+            print("Under Review.")
+    else:
+        print("You need a degree to be eligible for the job.")
+else:
+    print("You are not eligible as you are under 18.")
+
+#Q.no30
+weight = float(input("Enter the weight of the package (in kg): "))
+if weight < 5:
+    cost = 5
+elif 5 <= weight <= 20:
+    cost = 10
+else:
+    cost = 20
+urgent = input("Is the delivery urgent? (yes/no): ").strip().lower()
+if urgent == "yes":
+    cost += 5 
+print(f"The total delivery cost is: ${cost}")
+
+#Q.no31
+income = float(input("Enter your annual income: "))
+if income >= 50000:
+    credit_score = int(input("Enter your credit score: "))
+    if credit_score > 700:
+        print("Loan approved with standard interest rate.")
+    elif 600 <= credit_score <= 700:
+        print("Loan approved with a higher interest rate.")
+    else:
+        print("Loan rejected due to low credit score.")
+else:
+    print("Loan rejected due to insufficient income.")
+
+
+#Q.no32
+weather = input("What is the weather like? (sunny/rainy): ")
+
+if weather == "sunny":
+    print("The weather is great! How about going for a hike or having a picnic?")
+elif weather == "rainy":
+    rain_gear = input("Do you have a raincoat or an umbrella? (yes/no): ")
+    if rain_gear == "yes":
+        print("You can visit a nearby mall or museum and enjoy your day!")
+    else:
+        print("It's best to stay home and watch some movies or relax indoors.")
+else:
+    print("Sorry, I can only suggest activities for sunny or rainy weather!")
+
+#Q.no33
+print("Welcome to the Haunted House")
+
+choice1 = input("Do you want to go 'upstairs' or 'downstairs'? ").lower()
+if choice1 == "downstairs":
+    print("Game Over")
+else:
+    choice2 = input("Do you want to 'enter the room' or 'stay outside'? ").lower()
+    if choice2 == "enter the room":
+        print("Game Over")
+    else:
+        choice3 = input("Choose between 'ghost', 'vampire', or 'werewolf': ").lower()
+        if choice3 in ["ghost", "vampire"]:
+            print("Game Over")
+        elif choice3 == "werewolf":
+            print("You Win")
+        else:
+            print("Invalid choice. Game Over")
+
+#Q.no34
+print("Welcome to the Jungle Adventure")
+
+choice1 = input("Do you want to go 'left' or 'right'? ").lower()
+if choice1 == "right":
+    print("Game Over")
+else:
+    choice2 = input("Do you want to 'climb a tree' or 'explore the cave'? ").lower()
+    if choice2 == "climb a tree":
+        print("Game Over")
+    else:
+        choice3 = input("Choose between 'bear', 'tiger', or 'snake': ").lower()
+        if choice3 in ["bear", "tiger"]:
+            print("Game Over")
+        elif choice3 == "snake":
+            print("You Win")
+        else:
+            print("Invalid choice. Game Over")
+
+#Q.no35
+print("Welcome to the Magic Forest")
+
+choice1 = input("Do you want to go 'north' or 'south'? ").lower()
+if choice1 == "south":
+    print("Game Over")
+else:
+    choice2 = input("Do you want to 'cross the river' or 'follow the path'? ").lower()
+    if choice2 == "cross the river":
+        print("Game Over")
+    else:
+        choice3 = input("Choose between 'fairy', 'ogre', or 'elf': ").lower()
+        if choice3 in ["ogre", "fairy"]:
+            print("Game Over")
+        elif choice3 == "elf":
+            print("You Win")
+        else:
+            print("Invalid choice. Game Over")
+
+#Q.no36
+print("Welcome to the Space Mission")
+
+choice1 = input("Do you want to go 'to the moon' or 'to Mars'? ").lower()
+if choice1 == "to mars":
+    print("Game Over")
+else:
+    choice2 = input("Do you want to 'land on the surface' or 'stay in orbit'? ").lower()
+    if choice2 == "land on the surface":
+        print("Game Over")
+    else:
+        choice3 = input("Choose between 'alien', 'asteroid', or 'satellite': ").lower()
+        if choice3 in ["alien", "asteroid"]:
+            print("Game Over")
+        elif choice3 == "satellite":
+            print("You Win")
+        else:
+            print("Invalid choice. Game Over")
+
+#Q.no37
+print("Welcome to the Pirate Island")
+
+choice1 = input("Do you want to go 'left' or 'right'? ").lower()
+if choice1 == "right":
+    print("Game Over")
+else:
+    choice2 = input("Do you want to 'dig for treasure' or 'sail the ship'? ").lower()
+    if choice2 == "dig for treasure":
+        print("Game Over")
+    else:
+        choice3 = input("Choose between 'shark', 'pirate ship', or 'mermaid': ").lower()
+        if choice3 in ["shark", "pirate ship"]:
+            print("Game Over")
+        elif choice3 == "mermaid":
+            print("You Win")
+        else:
+            print("Invalid choice. Game Over")
+
+                                    #DONE
+
+
+
+
+
+
+
+
+
+
 
